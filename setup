@@ -28,6 +28,6 @@ if test -n "$STYLE"
   install_fonts
   install_themes
 else
-  echo "No style selected, Exiting..."
+  echo "No style selected, exiting..."
   exit 1
 end
