@@ -15,7 +15,19 @@ if test -z "$THEME"
   echo "No theme selected, exiting ..."
 else
   set bars (cat $TDIR/$THEME/main.ini | rg -o '^\[bar/(\w+)\]' -r '$1')
-  for bat in $bars[2..-1]
+  set nb (count bars)
+
+  # Themes with multiple bars shouldn't use "main"
+  if test "$nb" -gt 1
+    for i in $nb
+      if test "$bars[$nb]" -eq main
+        set -e $bars[$nb]
+        break
+      end
+    end
+  end
+
+  for bar in $bars
     polybar -q $bar -c $TDIR/$THEME/main.ini &
   end
 end
