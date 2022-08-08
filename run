@@ -7,7 +7,7 @@ if contains "$argv" $THEMES
   set THEME $argv
 else if contains "$POLYBAR_THEME" $THEMES
   set THEME $POLYBAR_THEME
-else if status is-interactive
+else
   set THEME (string collect $THEMES | sk --no-multi --height=(count . $THEMES) --no-clear -p "Select theme: ")
 end
 
