@@ -6,19 +6,20 @@ set PDIR ~/.config/polybar
 
 function install_fonts
   echo "Installing fonts..."
-  mkdir -p "$FDIR"
-  cp -rf $DIR/fonts/* "$FDIR"
+  mkdir -p $FDIR/
+  cp -rf $DIR/fonts/* $FDIR/
 end
 
 function install_themes
   if test -d "$PDIR"
     echo "Backing up old polybar config..."
-    mv "$PDIR" "${PDIR}.old"
+    mv $PDIR/ $PDIR.bak/
   end
   
   echo "Installing polybar themes..."
-  mkdir -p "$PDIR"
-  cp -rf $DIR/$STYLE/* "$PDIR"
+  mkdir -p $PDIR/themes/
+  cp -rf $DIR/$STYLE/* $PDIR/themes/
+  cp -f $DIR/run $PDIR/
 end
 
 set STYLES simple bitmap
