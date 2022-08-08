@@ -22,7 +22,7 @@ function install_themes
 end
 
 set STYLES simple bitmap
-set STYLE (string collect $STYLES | sk --no-multi --height=3 --no-clear -p "Select style")
+set STYLE (string collect $STYLES | sk --no-multi --height=3 --no-clear -p "Select style: ")
   
 if test -n "$STYLE"
   install_fonts
