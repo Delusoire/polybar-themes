@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/.config/polybar/cuts"
+DIR="$HOME/.config/polybar/themes/cuts"
 
 # Terminate already running bar instances
 killall -q polybar

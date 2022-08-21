@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/.config/polybar/hack"
+DIR="$HOME/.config/polybar/themes/hack"
 
 # Terminate already running bar instances
 killall -q polybar

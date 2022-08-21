@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Color files
-PFILE="$HOME/.config/polybar/docky/colors.ini"
-RFILE="$HOME/.config/polybar/docky/scripts/rofi/colors.rasi"
+PFILE="$HOME/.config/polybar/themes/docky/colors.ini"
+RFILE="$HOME/.config/polybar/themes/docky/scripts/rofi/colors.rasi"
 
 # Get colors
 pywal_get() {
